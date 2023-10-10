@@ -1,7 +1,7 @@
 <template>
   <div id="container">
     <div id="inicio">
-      <h1>Elija la dificultad</h1>
+      <!-- <h1>Elija la dificultad</h1>
 
 
         <button id="btnfac" type="button" class="button1"><router-link to="/"
@@ -14,11 +14,12 @@
             class="text-black">medio</router-link></button>
 
             <button id="btnfac" type="button" class="button4"><router-link to="/dificil"
-            class="text-black">dificil</router-link></button>
+            class="text-black">dificil</router-link></button> -->
 
-            <router-view></router-view>
+            
 
     </div>
+    <router-view></router-view>
   </div>
 
 

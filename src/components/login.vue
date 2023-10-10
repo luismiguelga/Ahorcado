@@ -4,8 +4,7 @@
       <h1>Elija la dificultad</h1>
 
 
-        <button id="btnfac" type="button" class="button1"><router-link to="/"
-              class="text-black">Login</router-link></button>
+     
 
       <button id="btnfac" type="button" class="button2"><router-link to="/facil"
             class="text-black">facil</router-link></button>
