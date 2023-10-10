@@ -1,3 +1,34 @@
+<template>
+  <div class="flex">
+    <h1>¡Juego del ahorcado!</h1>
+    <link rel="stylesheet" type="text/css" href="stylej.css">
+    <img :src="currentImage[wrongWords]" alt="Ahorcado imágenes" class="mx-auto d-block mb-5" />
+    <div class="text-center mb-5">
+      <h2 v-if="!gameOver" class="text-uppercase font-monospace space">{{ hiddenWord }}</h2>
+      <h2 v-if="gameOver" class="text-capitalize">{{ word }}</h2>
+    </div>
+
+    <div class="grid">
+      <button v-for="letter in letters" :key="letter" @click="checkLetter(letter)"
+        :class="{ 'disabled': usedLetters.includes(letter), 'btn-danger': usedLetters.includes(letter) }"
+        class="px-5 py-3 border rounded mx-1 my-1 text-center btn btn-info text-uppercase" style="width: 1px">{{ letter
+        }}</button>
+    </div>
+
+
+    <div class="flex">
+      <div v-if="gameOver" class="text-center">
+        <p v-if="youWin" class="h3 text-success">¡Ganaste!</p>
+        <p v-if="!youWin" class="h3 text-danger">¡Perdiste!</p>
+        <button @click="restartGame" class="btn btn-primary mt-3">Jugar de nuevo</button>
+      </div>
+    </div>
+  </div>
+
+  <a href="../../index.html" id="Volver">Volver</a>
+  <img :src="'./src/assets/' + wrongWords + '.png'" alt="Ahorcado imagenes" class="mx-auto d-block mb-5" />
+</template>
+
 <script>
 import { ref } from 'vue';
 
@@ -5,8 +36,8 @@ export default {
   setup() {
 
     let categoriesList = ref({
-  'coloreslist': ['negro', 'naranja', 'rojo', 'naranja', 'cafe', 'verde', 'morado', 'azul']
-});
+      'coloreslist': ['negro', 'naranja', 'rojo', 'naranja', 'cafe', 'verde', 'morado', 'azul']
+    });
 
     let selectVector = ref(categoriesList.value['coloreslist'])
 
@@ -21,12 +52,12 @@ export default {
     let youWin = ref(false);
 
     const chooseWord = () => {
-  // Determinar de qué categoría seleccionar palabras
-  let selectedCategory = 'coloreslist'; // Por defecto, seleccionar de 'coloreslist'
+      // Determinar de qué categoría seleccionar palabras
+      let selectedCategory = 'coloreslist'; // Por defecto, seleccionar de 'coloreslist'
 
-  word.value = categoriesList.value[selectedCategory][Math.floor(Math.random() * categoriesList.value[selectedCategory].length)];
-  hiddenWord.value = '_'.repeat(word.value.length);
-};
+      word.value = categoriesList.value[selectedCategory][Math.floor(Math.random() * categoriesList.value[selectedCategory].length)];
+      hiddenWord.value = '_'.repeat(word.value.length);
+    };
 
 
     const checkLetter = (letter) => {
@@ -81,52 +112,30 @@ export default {
       incorrectLetters,
       checkLetter,
       restartGame,
+      currentImage
     };
   },
 };
+import imagen0 from "../assets/0.png";
+import imagen1 from "../assets/1.png";
+import imagen2 from "../assets/2.png";
+import imagen3 from "../assets/3.png";
+import imagen4 from "../assets/4.png";
+import imagen5 from "../assets/5.png";
+import imagen6 from "../assets/6.png";
+
+const currentImage = ref([imagen0, imagen1, imagen2, imagen3, imagen4, imagen5, imagen6]) // Inicialmente muestra la imagen 0
 </script>
   
 
 
-<template>
-  
 
-  <link rel="stylesheet" type="text/css" href="stylej.css">
-
-  <div class="flex">
-    <h1>¡Juego del ahorcado!</h1>
-
-    <div class="text-center mb-5">
-      <h2 v-if="!gameOver" class="text-uppercase font-monospace space">{{ hiddenWord }}</h2>
-      <h2 v-if="gameOver" class="text-capitalize">{{ word }}</h2>
-    </div>
-
-    <div class="grid">
-      <button v-for="letter in letters" :key="letter" @click="checkLetter(letter)"
-        :class="{ 'disabled': usedLetters.includes(letter), 'btn-danger': usedLetters.includes(letter) }"
-        class="px-5 py-3 border rounded mx-1 my-1 text-center btn btn-info text-uppercase" style="width: 1px">{{ letter
-        }}</button>
-    </div>
-
-
-    <div class="flex">
-      <div v-if="gameOver" class="text-center">
-        <p v-if="youWin" class="h3 text-success">¡Ganaste!</p>
-        <p v-if="!youWin" class="h3 text-danger">¡Perdiste!</p>
-        <button @click="restartGame" class="btn btn-primary mt-3">Jugar de nuevo</button>
-      </div>
-    </div>
-  </div>
-  
-  <a href="../../index.html" id="Volver">Volver</a>
-  <img :src="'./src/assets/' + wrongWords + '.png'" alt="Ahorcado imagenes" class="mx-auto d-block mb-5" />
-</template>
 
 <style scoped>
-img{
-position: fixed;
-top: 100px;
-left: 100px;
+img {
+  position: fixed;
+  top: 100px;
+  left: 100px;
 }
 
 h2 {
@@ -161,9 +170,9 @@ button:hover {
 
 }
 
-  button {
-    background-color: #fac000;
-  }
+button {
+  background-color: #fac000;
+}
 
 .flex {
   display: grid;
@@ -193,6 +202,4 @@ p {
   left: 90PX;
   font-size: 2em;
 }
-
-
 </style>
