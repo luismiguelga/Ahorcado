@@ -1,25 +1,17 @@
 import { createApp } from 'vue'
 import './style.css'
-//Conecta el html con el main.js y el main.js se conecta con el vue
 import App from './App.vue'
-import juego from './components/juego.vue'
-import frutas from './components/juegos-f.vue'
-import animales from './components/juegos-a.vue'
-import colores from './components/juegos-c.vue'
-// separador
+import {router} from "./routes/routes.js"
 
 
 
-import Facil from './components/Facil.vue'
-import Medio from './components/Medio.vue'
-import Dificil from './components/Dificil.vue'
 
 
-createApp(App).mount('#app')
-createApp(juego).mount('#juego')
-createApp(frutas).mount('#frutas')
-createApp(animales).mount('#animales')
-createApp(colores).mount('#colores')
+const app = createApp(App)
+
+app.use(router)
+app.mount('#app')
+
 
 
 document.querySelector('#btnfac').addEventListener("click", () => {

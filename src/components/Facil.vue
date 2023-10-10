@@ -9,29 +9,43 @@
           src="https://img.freepik.com/vector-premium/ilustracion-globo-planeta-tierra-plana-mapa-mundo_385450-21.jpg?w=2000  ">
         <br>
         <h2>Paises</h2>
-        <a href="../../juego.html" id="jugar">Jugar!</a>
+
+        <button id="jugar" type="button" class="button1"><router-link to="/juegoa" class="text-black">play</router-link></button>
+
+        <router-view></router-view>
+
       </div>
 
     </div>
 
     <div id="tarjetas">
 
-      <div id="categoria2"><img
-          src="https://i.pinimg.com/originals/4c/18/68/4c18686eae46e736254c6b4e1ba6b98a.png">
+      <div id="categoria2"><img src="https://i.pinimg.com/originals/4c/18/68/4c18686eae46e736254c6b4e1ba6b98a.png">
         <br>
         <h2>Frutas</h2>
-        <a href="../../frutas.html" id="jugar">Jugar!</a>
+
+        <button id="jugar" type="button" class="button1"><router-link to="/juegod" class="text-black">play</router-link></button>
+
+<router-view></router-view>
+       
       </div>
 
     </div>
 
     <div id="tarjetas">
 
-      <div id="categoria3"><img
-        src="https://cdn.pixabay.com/photo/2020/03/22/12/10/animal-cartoon-face-4956914_1280.png">
+      <div id="categoria3"><img src="https://cdn.pixabay.com/photo/2020/03/22/12/10/animal-cartoon-face-4956914_1280.png">
         <br>
         <h2>Animales</h2>
-        <a href="../../animales.html" id="jugar">Jugar!</a>
+
+
+        <button id="jugar" type="button" class="button1"><router-link to="/juegob" class="text-black">play</router-link></button>
+
+<router-view></router-view>
+
+        
+
+
       </div>
 
     </div>
@@ -42,7 +56,14 @@
           src="https://www.clipartmax.com/png/full/194-1949271_l%C3%A1pices-de-colores-de-dibujos-animados-lapices-de-colores-animados-png.png">
         <br>
         <h2>Colores</h2>
-        <a href="../../colores.html" id="jugar">Jugar!</a>
+
+        <button id="jugar" type="button" class="button1"><router-link to="/juegoc" class="text-black">play</router-link></button>
+
+<router-view></router-view>
+
+       
+
+
       </div>
 
     </div>
@@ -66,6 +87,7 @@ h1 {
   font-weight: bold;
 
 }
+
 h2 {
   text-align: center;
   text-align: center;
@@ -110,7 +132,7 @@ img {
   align-items: center;
 }
 
-#jugar{
+#jugar {
   width: 100px;
   height: 40px;
   border-radius: 5px;
@@ -121,6 +143,7 @@ img {
   font-weight: bold;
   text-decoration: none;
 }
+
 #jugar:hover {
   background-color: rgb(54, 100, 250);
   width: 120px;
@@ -132,10 +155,11 @@ body {
   margin: 0;
   background-color: black;
   background-image: url("");
-  background-repeat: no-repeat; 
-  background-size: cover; 
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#Volver{
+
+#Volver {
   color: rgb(255, 255, 255);
   position: fixed;
   top: 90%;
@@ -143,5 +167,4 @@ body {
   font-size: 2em;
   text-decoration: none;
 }
-
 </style>

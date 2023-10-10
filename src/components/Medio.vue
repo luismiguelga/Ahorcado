@@ -9,7 +9,9 @@
           src="https://img.freepik.com/vector-premium/ilustracion-globo-planeta-tierra-plana-mapa-mundo_385450-21.jpg?w=2000  ">
         <br>
         <h2>Paises</h2>
-        <a href="../../juego.html" id="jugar">Jugar!</a>
+        <button id="jugar" type="button" class="button1"><router-link to="/juegoa" class="text-black">play</router-link></button>
+
+        <router-view></router-view>
       </div>
 
     </div>
@@ -20,7 +22,9 @@
           src="https://i.pinimg.com/originals/4c/18/68/4c18686eae46e736254c6b4e1ba6b98a.png">
         <br>
         <h2>Frutas</h2>
-        <a href="../../frutas.html" id="jugar">Jugar!</a>
+        <button id="jugar" type="button" class="button1"><router-link to="/juegod" class="text-black">play</router-link></button>
+
+<router-view></router-view>
       </div>
 
     </div>
@@ -31,7 +35,10 @@
         src="https://cdn.pixabay.com/photo/2020/03/22/12/10/animal-cartoon-face-4956914_1280.png">
         <br>
         <h2>Animales</h2>
-        <a href="../../animales.html" id="jugar">Jugar!</a>
+
+        <button id="jugar" type="button" class="button1"><router-link to="/juegob" class="text-black">play</router-link></button>
+
+<router-view></router-view>
       </div>
 
     </div>
@@ -42,7 +49,11 @@
           src="https://www.clipartmax.com/png/full/194-1949271_l%C3%A1pices-de-colores-de-dibujos-animados-lapices-de-colores-animados-png.png">
         <br>
         <h2>Colores</h2>
-        <a href="../../colores.html" id="jugar">Jugar!</a>
+
+        <button id="jugar" type="button" class="button1"><router-link to="/juegoc" class="text-black">play</router-link></button>
+
+<router-view></router-view>
+
       </div>
 
     </div>
