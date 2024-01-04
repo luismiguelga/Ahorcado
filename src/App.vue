@@ -2,8 +2,10 @@
   <div id="container">
     <div id="inicio">
 
-<h1>holaaaa</h1>
-    </div>
+<h1>dada</h1>
+<h2>hdasdahida</h2>
+
+</div>
     <router-view></router-view>
   </div>
 
