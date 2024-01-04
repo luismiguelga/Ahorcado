@@ -15,6 +15,9 @@
             <button id="btnfac" type="button" class="button4"><router-link to="/dificil"
             class="text-black">dificil</router-link></button>
 
+            <button id="btnfac" type="button" class="button5"><router-link to="/prueba1"
+            class="text-black">prueba1</router-link></button>
+
             <router-view></router-view>
 
     </div>

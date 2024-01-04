@@ -8,6 +8,7 @@ import juegob from "../components/juegob.vue" //animales
 import juegoc from "../components/juegoc.vue" //colores
 import juegod from "../components/juegosd.vue" //frutas
 
+import prueba1 from "../components/prueba1/prueba1.vue" //prueba
 
 
 import { createRouter, createWebHashHistory } from "vue-router"
@@ -21,6 +22,7 @@ const routes = [
   { path: "/juegob", component: juegob },
   { path: "/juegoc", component: juegoc },
   { path: "/juegod", component: juegod },
+  {path: "/prueba1", component: prueba1}
 
 
 

@@ -1,23 +1,8 @@
 <template>
   <div id="container">
     <div id="inicio">
-      <!-- <h1>Elija la dificultad</h1>
 
-
-        <button id="btnfac" type="button" class="button1"><router-link to="/"
-              class="text-black">Login</router-link></button>
-
-      <button id="btnfac" type="button" class="button2"><router-link to="/facil"
-            class="text-black">facil</router-link></button>
-
-            <button id="btnfac" type="button" class="button3"><router-link to="/medio"
-            class="text-black">medio</router-link></button>
-
-            <button id="btnfac" type="button" class="button4"><router-link to="/dificil"
-            class="text-black">dificil</router-link></button> -->
-
-            
-
+<h1>holaaaa</h1>
     </div>
     <router-view></router-view>
   </div>
@@ -43,7 +28,7 @@ import { ref } from "vue";
   align-items: center;
   flex-direction: column;
   gap: 15px;
-
+  background-color: red;
 }
 
 h1 {
